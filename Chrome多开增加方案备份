@@ -1,0 +1,19 @@
+1.
+set chromePath to "/Applications/Chrome012.app/Contents/MacOS/Google Chrome"
+set userDataDir to "/Applications/Chrome012.app/config"
+
+do shell script "open -na " & quoted form of chromePath & " --args --user-data-dir=" & quoted form of userDataDir & " > /dev/null 2>&1 &"
+1.2
+mkdir -p /Applications/Chrome012.app/config
+
+2.
+set chromePath to "/Applications/Chrome016.app/Contents/MacOS/Google Chrome"
+
+set userDataDir to "/Applications/Chrome016.app/config"
+
+set chromePathPOSIX to quoted form of POSIX path of chromePath
+set userDataDirPOSIX to quoted form of POSIX path of userDataDir
+
+do shell script "open -na " & chromePathPOSIX & " --args --user-data-dir=" & userDataDirPOSIX & " > /dev/null 2>&1 &"
+2.2
+mkdir -p /Applications/Chrome012.app/config
